@@ -1,0 +1,10 @@
+# Keep local build outputs out of the image build context; the full repo (incl. .git) is baked in.
+mayhem/build-obj/
+*.o
+*.a
+*.so
+*.dylib
+**/__pycache__/
+.DS_Store
+*.swp
+*~

@@ -1,0 +1,9 @@
+project: savantenvs/processhacker
+target: fuzz_jsonc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_jsonc/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_jsonc
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/processhacker
+target: fuzz_zydis
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_zydis/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_zydis
+    libfuzzer: true
+    timeout: 5
